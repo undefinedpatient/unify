@@ -6,58 +6,73 @@ let menuClass= ref("menuBar");
 <template>
   <div class="home">
     <h1>Unify</h1>
+    
   </div>
-  <div :class="menuClass">
+  <div :class=menuClass>
     <a href="#">Home</a>
-    <a href="#">About Us</a>
+    <a href="#aboutUs">About Us</a>
+    <a href="#">News</a>
     <a href="#">Contact</a>
     <a href="#">Support Us</a>
+  </div>
+  <div class="aboutUs" id="aboutUs">
+    <h2>About Us</h2>
+    <p>This is a p</p>
   </div>
 </template>
 
 <style lang="css">
-  *{
-    box-sizing: border-box; 
-    margin: 0;
-    padding: 0;
-    border: 0;
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    scroll-behavior: smooth;
-  }
   div.home{
     position:relative; 
     width: 100vw;
     height: 100vh;
     font-size: 2em;
-
+    
     background-image: url("./assets/nightsky.png");
     background-size: cover;
     &>h1{
       position:absolute;
-      color:white;
-      font-size: 4em;
-      left: 30px;
-      bottom: 10px;
+      left: 24px;
+      bottom: 72px;
     }
   }
   div.menuBar{
+    position:sticky;
     display: flex;
       flex-direction: row;
-      justify-content: left;
-    background-color: rgb(110, 110, 110);
-    font-size:1em;
-  }
-  a{
-    display: block;
-    position: relative;
-    padding: 0px 10px 0px 10px;
-    background-color: rgba(255, 255, 255, 0);
-    
+      justify-content:left;
+    z-index: 1;
+    top: 0;
+    margin: -60px 0 0 0;
+    background-color: rgba(0, 0, 0, 0.4);
     font-size: 2em;
-    text-decoration: none;
-    color:rgb(255, 255, 255);
-    &:hover{
-      background-color: rgba(255, 255, 255, 0.1);
+    width: 100vw;
+    height: 60px;
+    & a{
+      display: block;
+      position: relative;
+      padding: 8px 24px 8px 24px;
+      background-color: rgba(255, 255, 255, 0);
+      min-width: max-content;
+      overflow: hidden;
+      font-size: 100%;
+      text-decoration: none;
+      &:hover{
+        background-color: rgba(255, 255, 255, 0.1);
+      }
     }
+  }
+  div.aboutUs{
+    position: relative;
+    display: block;
+    width: 100vw;
+    height: 100vw;
+    padding: 16px;
+    font-size: 1em;
+    background-color: var(--layer00);
+    & p{
+      font-size: 1em;
+    }
+    
   }
 </style>
