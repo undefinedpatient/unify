@@ -5,7 +5,7 @@ let menuClass= ref("menuBar");
 
 <template>
   <div class="home">
-    <h1>Unify</h1>
+    <h1>Vertex Studio</h1>
     
   </div>
   <div :class=menuClass>
@@ -32,7 +32,7 @@ let menuClass= ref("menuBar");
     background-size: cover;
     &>h1{
       position:absolute;
-      left: 24px;
+      left: 32px;
       bottom: 72px;
     }
   }
@@ -70,6 +70,11 @@ let menuClass= ref("menuBar");
     padding: 16px;
     font-size: 1em;
     background-color: var(--layer00);
+    background-image: 
+    linear-gradient(0deg,rgba(24, 24, 24, 0.8),50%, rgba(20, 20, 20, 0.5)),
+    url("./assets/studio.png");
+      
+    background-size: cover;
     & p{
       font-size: 1em;
     }
