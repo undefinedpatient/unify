@@ -1,5 +1,6 @@
 *{ 
     --layer00: rgb(42, 40, 51);
+    --layer01: rgb(51, 46, 73);
     color: white;
     margin: 0;
     padding: 0;
@@ -15,4 +16,7 @@ h1{
 }
 h2{
     font-size: 3em;
+}
+h3{
+    font-size: 2.4em;
 }
